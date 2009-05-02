@@ -4,7 +4,7 @@ Version:	2.0.3
 Release:	%mkrel 1
 Source:		http://wald.intevation.org/frs/download.php/561/%name-%version.tar.gz
 Patch0:		openvas-client-2.0.3-fix-str-fmt.patch
-Group:		System/Server
+Group:		System/Configuration/Networking
 Url:		http://www.openvas.org
 License:	GPLv2+
 BuildRoot:	%{_tmppath}/%name-%{version}-root
