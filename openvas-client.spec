@@ -9,7 +9,6 @@ Url:		http://www.openvas.org
 License:	GPLv2+
 BuildRoot:	%{_tmppath}/%name-%{version}-root
 BuildRequires:	gtk+2-devel
-BuildRequires:	openssl-devel
 BuildRequires:	openvas-devel >= 3.0
 
 %description
