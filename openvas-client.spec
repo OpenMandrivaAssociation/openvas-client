@@ -1,10 +1,8 @@
 Summary: 	Client module for OpenVAS
 Name:		openvas-client
-Version:	3.0.0
+Version:	3.0.2
 Release:	%mkrel 1
 Source:		http://wald.intevation.org/frs/download.php/561/%name-%version.tar.gz
-Patch0:		openvas-client-3.0.0-fix-str-fmt.patch
-Patch1:		openvas-client-3.0.0-fix-linkage.patch
 Group:		System/Configuration/Networking
 Url:		http://www.openvas.org
 License:	GPLv2+
@@ -18,8 +16,6 @@ with NessusClient CVS HEAD 20070704.
 
 %prep
 %setup -q -n %name-%version
-%patch0 -p0
-%patch1 -p0
 
 %build
 %configure2_5x --disable-static --enable-gtk
