@@ -1,0 +1,45 @@
+diff -ru openvas-client-3.0.3/include/config.h.in openvas-client-3.0.3.new/include/config.h.in
+--- openvas-client-3.0.3/include/config.h.in	2010-03-23 20:46:23.000000000 +0100
++++ openvas-client-3.0.3.new/include/config.h.in	2011-03-22 00:36:49.000000000 +0100
+@@ -34,6 +34,12 @@
+    http://www.iana.org/assignments/port-numbers */
+ #define OPENVAS_IANA_OTP_PORT 9390
+ 
++/* Ports as used by OpenVAS 4 */
++#define OPENVAS_MANAGER_PORT 9390
++#define OPENVAS_SCANNER_PORT 9391
++#define OPENVAS_GSA_PORT 9392
++#define OPENVAS_ADMINISTRATOR_PORT 9393
++
+ /*
+  * How much time before closing
+  * the connection if nothing comes
+diff -ru openvas-client-3.0.3/openvas/openvas-client.h openvas-client-3.0.3.new/openvas/openvas-client.h
+--- openvas-client-3.0.3/openvas/openvas-client.h	2009-11-24 08:09:29.000000000 +0100
++++ openvas-client-3.0.3.new/openvas/openvas-client.h	2011-03-22 00:41:43.000000000 +0100
+@@ -23,6 +23,13 @@
+ #ifdef _WIN32
+ #ifndef OPENVAS_IANA_OTP_PORT
+ #define OPENVAS_IANA_OTP_PORT 9390
++
++/* Ports as used by OpenVAS 4 */
++#define OPENVAS_MANAGER_PORT 9390
++#define OPENVAS_SCANNER_PORT 9391
++#define OPENVAS_GSA_PORT 9392
++#define OPENVAS_ADMINISTRATOR_PORT 9393
++
+ #endif
+ #endif
+ 
+diff -ru openvas-client-3.0.3/openvas/preferences.c openvas-client-3.0.3.new/openvas/preferences.c
+--- openvas-client-3.0.3/openvas/preferences.c	2010-07-19 14:34:39.000000000 +0200
++++ openvas-client-3.0.3.new/openvas/preferences.c	2011-03-22 00:31:05.000000000 +0100
+@@ -653,7 +653,7 @@
+   else if (!strcmp(name, "nessusd_user"))
+     return (void *)g_get_user_name();
+   else if (!strcmp(name, "nessusd_port"))
+-    return (void *)OPENVAS_IANA_OTP_PORT;
++    return (void *)OPENVAS_SCANNER_PORT;
+   else if (!strcmp(name, "ssl_version"))
+     return SSL_VER_DEF_NAME;
+   else if (!strcmp(name, "openvas_dir"))
