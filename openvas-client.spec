@@ -1,7 +1,7 @@
 Summary: 	Client module for OpenVAS
 Name:		openvas-client
 Version:	3.0.3
-Release:	1
+Release:	2
 Source0:		http://wald.intevation.org/frs/download.php/561/%name-%version.tar.gz
 source1:	.abf.yml
 Group:		System/Configuration/Networking
