@@ -7,6 +7,11 @@ source1:	.abf.yml
 Group:		System/Configuration/Networking
 Url:		https://www.openvas.org
 License:	GPLv2+
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	pkgconfig(gtk+-2.0)
 BuildRequires:	openvas-devel >= 3.0
 Patch0:		openvas-client-3.0.3-devel.patch
